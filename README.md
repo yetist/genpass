@@ -7,25 +7,38 @@
 ## 特性
 
 [x] 命令行版本
-[ ] web版本
+
+[x] web版本
 
 ## 命令行版本
 
+```
 NAME:
-   gen - Generate password now
+   genpass - Generate Password
 
 USAGE:
-   command gen [command options] [arguments...]
+   genpass [global options]
 
-DESCRIPTION:
-   Generate your password.
+VERSION:
+   0.1
 
-OPTIONS:
-   --user, -u 'username'	User name about website.
-   --domain, -d 'baidu.com'	The domain about your password used for.
-   --flag, -f 'alpha'		Which chars should include in password, valid option is:
-				upper|lower|alpha|digit|punct|xdigit|alpha|alnum|graph
-   --extra, -e 			Which extra chars can used for part of password.
-   --method, -m 'sha256'	Which method should use, valid options is: md5|sha1|sha256|sha512
-   --reversion, -r '0'		Password version, for update password.
-   --length, -l '8'		Password length, default is 8.
+COMMANDS:
+   server	Run http server to use web generate password.
+   help, h	Shows a list of commands or help for one command
+   
+GLOBAL OPTIONS:
+   --primary, -p 'primary'		Primary password, or use user name about website.
+   --description, -d 'description.com'	Description about the password, or use the website domain.
+   --flag, -f 'alnum'			Which chars should include in password, valid option is:
+					upper|lower|alpha|digit|punct|xdigit|alpha|alnum|graph
+   --extra, -e 				Which extra chars can used for part of password.
+   --method, -m 'sha256'		Which method should use, valid options is: md5|sha1|sha256|sha512
+   --reversion, -r '0'			Password version, for update password.
+   --length, -l '8'			Password length, default is 8.
+   --help, -h				show help
+   --version, -v			print the version
+```
+
+## Web版本
+
+[Demo](http://moses.zhcn.cc:9999)
