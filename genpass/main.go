@@ -1,11 +1,11 @@
 package main
 
-//"github.com/martini-contrib/binding"
 import (
 	"fmt"
 	"github.com/chai2010/gettext-go/gettext"
 	"github.com/codegangsta/cli"
 	"github.com/go-martini/martini"
+	"github.com/martini-contrib/binding"
 	"github.com/martini-contrib/render"
 	"github.com/yetist/genpass"
 	"github.com/yetist/middleware/i18n"
@@ -29,19 +29,19 @@ var webFlags = []cli.Flag{
 
 var cmdFlags = []cli.Flag{
 	cli.StringFlag{
-		Name:  "user, u",
+		Name:  "primary, p",
 		Value: "username",
-		Usage: __("User name about website."),
+		Usage: __("Primary password, or use user name about website."),
 	},
 
 	cli.StringFlag{
-		Name:  "domain, d",
+		Name:  "description, d",
 		Value: "baidu.com",
-		Usage: __("The domain about your password used for."),
+		Usage: __("Description about the password, or use the website domain."),
 	},
 	cli.StringFlag{
 		Name:  "flag, f",
-		Value: "alpha",
+		Value: "alnum",
 		Usage: __("Which chars should include in password, valid option is:\n\tupper|lower|alpha|digit|punct|xdigit|alpha|alnum|graph"),
 	},
 	cli.StringFlag{
@@ -66,19 +66,21 @@ var cmdFlags = []cli.Flag{
 	},
 }
 
-var CmdGen = cli.Command{
-	Name:        "gen",
-	Usage:       __("Generate password now"),
-	Action:      runGen,
-	Flags:       cmdFlags,
-	Description: __("Generate your password."),
-}
-
 var CmdServer = cli.Command{
 	Name:   "server",
-	Usage:  __("Run http server to user web generate password."),
+	Usage:  __("Run http server to use web generate password."),
 	Action: runServer,
 	Flags:  webFlags,
+}
+
+type PostForm struct {
+	Primary     string `form:"primary" binding:"required"`
+	Description string `form:"description" binding:"required"`
+	ExtraChars  string `form:"extra"`
+	Method      string `form:"method" binding:"required"`
+	Flag        string `form:"flag" binding:"required"`
+	Reversion   int    `form:"reversion" binding:"required"`
+	Length      int    `form:"length" binding:"required"`
 }
 
 func runServer(c *cli.Context) {
@@ -101,8 +103,18 @@ func runServer(c *cli.Context) {
 	m.Get("/", func(r render.Render) {
 		r.HTML(200, "index", nil)
 	})
-	m.Post("/", func(r render.Render) string {
-		return "ok"
+	m.Post("/", binding.Form(PostForm{}), func(r render.Render, form PostForm) {
+		opt := genpass.Options{
+			Primary:     form.Primary,
+			Description: form.Description,
+			ExtraChars:  form.ExtraChars,
+			Method:      form.Method,
+			Flag:        genFlag(form.Flag),
+			Reversion:   form.Reversion,
+			Length:      form.Length,
+		}
+		p := genpass.Gen(opt)
+		r.JSON(200, map[string]string{"password": p})
 	})
 	martini.Env = martini.Prod
 	m.RunOnAddr(":" + strconv.Itoa(port))
@@ -124,8 +136,8 @@ func genFlag(flag string) int {
 
 func runGen(c *cli.Context) {
 	opt := genpass.Options{
-		Primary:     c.String("user"),
-		Description: c.String("domain"),
+		Primary:     c.String("primary"),
+		Description: c.String("description"),
 		ExtraChars:  c.String("extra"),
 		Method:      c.String("method"),
 		Flag:        genFlag(c.String("flag")),
@@ -145,11 +157,10 @@ func main() {
 	gettext.Textdomain(PkgName)
 	app := cli.NewApp()
 	app.Name = PkgName
-	app.Usage = __("Generate Password Service")
+	app.Usage = __("Generate Password")
 	app.Version = PkgVersion
-	app.Commands = []cli.Command{
-		CmdServer,
-		CmdGen,
-	}
+	app.Action = runGen
+	app.Flags = cmdFlags
+	app.Commands = []cli.Command{CmdServer}
 	app.Run(os.Args)
 }

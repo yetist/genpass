@@ -10,61 +10,85 @@
 		<title>Genpass</title>
 		<link rel="stylesheet" href="/static/css/bootstrap.min.css">
 		<link rel="stylesheet" href="/static/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="/static/css/font-awesome.min.css">
 		<script src="/static/js/jquery.min.js"></script>
 		<script src="/static/js//bootstrap.min.js"></script>
 		<!--[if lt IE 9]>
 	  <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 	  <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
 	  <![endif]-->
+	  <script type="text/javascript">
+$(document).ready(function(){
+	$("#passwd_field").hide();
+	$("#genform").submit(function(e){
+		e.preventDefault();
+		$.ajax({
+			cache: false,
+			type: "POST",
+			url: "/",
+			data:$('#genform').serialize(),
+			async: false,
+			success: function(data) {
+				$("#passwd_field").show();
+				$("#passwd_value").text(data.password);
+			}
+		});
+	});
+});
+	  </script>
 	</head>
 
 	<body>
 		<div class="container">
-				<form class="form-signin">
-					<h2 class="form-signin-heading">{{__ ("Genpass")}}</h2>
-					<div class="row">
+			<form id="genform" method="post">
+				<h2 class="form-signin-heading">{{__ ("Genpass")}}</h2>
+				<fieldset id="passwd_field">
+					<div class="form-group">
+						<label class="control-label">{{__ ("Generated Password")}}</label>
+						<p id="passwd_value" class="form-control-static"></p>
 					</div>
+				</fieldset>
 					<fieldset>
 					<h3><i class="fa fa-square"></i>{{__ ("Basic")}}</h3>
 					<div class="form-group">
-					<label for="user">{{__ ("User Name")}}</label>
-					<input type="text" id="user" class="form-control" placeholder="User Name" autofocus>
+						<label for="primary">{{__ ("Primary")}} {{__ ("(original password, or use username about website.)")}}</label>
+						<input type="text" name="primary" id="primary" class="form-control" placeholder="Primary" autofocus>
 
-					<label for="domain">{{__ ("Web Domain")}}</label>
-					<input type="text" id="domain" class="form-control" placeholder="Domain">
-					<label for="length">{{__ ("Length (default:10)")}}</label>
-					<input type="number" id="length" class="form-control" min="1" max="25" placeholder="Length" value="10">
+						<label for="description">{{__ ("Description")}} {{__ ("(password description, or use the website domain.)")}}</label>
+						<input type="text" name="description" id="description" class="form-control" placeholder="Description">
+
+						<label for="length">{{__ ("Length")}} {{__ ("(password length. default:8)")}}</label>
+						<input type="number" name="length" id="length" class="form-control" min="1" max="25" placeholder="Length" value="8">
 					</div>
-					</fieldset>
+				</fieldset>
 
-					<fieldset>
-					<h3><i class="fa fa-square"></i>{{__ ("Advanced")}}</h3>
-					<label for="method">Method (default: sha256)</label>
-					<select id="method" class="form-control">
+				<fieldset>
+					<h3><i class="fa fa-square"></i>{{__ ("Advanced Options")}}</h3>
+					<label for="method">{{__ ("Method")}} {{__ ("(encrypt algorithm. default: sha256)")}}</label>
+					<select name="method" id="method" class="form-control">
 						<option>md5</option>
 						<option>sha1</option>
 						<option selected>sha256</option>
 						<option>sha512</option>
 					</select>
-					<label for="flag">Flag (multiple, default: alnum)</label>
-					<select id="flag" multiple class="form-control">
-						<option>upper</option>
+					<label for="flag">{{__ ("Flag")}} {{__ ("(generate rules, support multiple.default: alnum)")}}</label>
+					<select name="flag" id="flag" multiple class="form-control">
 						<option>lower</option>
+						<option>upper</option>
 						<option>alpha</option>
 						<option>digit</option>
 						<option>punct</option>
 						<option>xdigit</option>
-						<option selected>alpha</option>
-						<option>alnum</option>
+						<option selected>alnum</option>
 						<option>graph</option>
 					</select>
-					<label for="extra">Extra Chars</label>
-					<input type="text" id="extra" class="form-control" placeholder="Extra Chars">
-					<label for="reversion">Reversion (default:0)</label>
-					<input type="number" id="reversion" class="form-control" min="0" max="100" value="0" placeholder="Reversion">
-					</fieldset>
-					<button class="btn btn-lg btn-primary btn-block" type="submit">Generate</button>
-				</form>
+					<label for="extra">{{__ ("Extra Chars")}} {{__ ("(can used for part of password.)")}}</label>
+					<input type="text" name="extra" id="extra" class="form-control" placeholder="Extra Chars">
+					<label for="reversion">{{__ ("Reversion")}} {{__ ("(used for password version. default:0)")}}</label>
+					<input type="number" name="reversion" id="reversion" class="form-control" min="0" max="100" value="0" placeholder="Reversion">
+				</fieldset>
+				<button class="btn btn-lg btn-primary btn-block" type="submit">Generate</button>
+			</form>
 		</div> <!-- /container -->
 	</body>
 </html>
