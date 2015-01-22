@@ -1,6 +1,7 @@
 #!/bin/bash
+eval $(grep "PkgName.*=" *.go|tr -d [:space:])
 LANGS=('zh_CN')
-DOMAIN=genpass
+DOMAIN=$PkgName
 KEYWORDS="--keyword=__ --keyword=N_ --keyword=C_:1c,2 --keyword=NC_:1c,2 --keyword=Q_:1g"
 
 update_sources() {
