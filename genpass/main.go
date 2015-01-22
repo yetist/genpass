@@ -30,13 +30,13 @@ var webFlags = []cli.Flag{
 var cmdFlags = []cli.Flag{
 	cli.StringFlag{
 		Name:  "primary, p",
-		Value: "username",
+		Value: "primary",
 		Usage: __("Primary password, or use user name about website."),
 	},
 
 	cli.StringFlag{
 		Name:  "description, d",
-		Value: "baidu.com",
+		Value: "description.com",
 		Usage: __("Description about the password, or use the website domain."),
 	},
 	cli.StringFlag{
