@@ -64,6 +64,10 @@ msgstr ""
 "#-#-#-#-#  genpass.pot (PACKAGE VERSION)  #-#-#-#-#\n"
 "#-#-#-#-#  genpass.pot (PACKAGE VERSION)  #-#-#-#-#\n"
 "#-#-#-#-#  genpass.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  genpass.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  genpass.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  genpass.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  genpass.pot (PACKAGE VERSION)  #-#-#-#-#\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-01-21 17:36+0800\n"
@@ -712,6 +716,126 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
+"#-#-#-#-#  genpass_src.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-01-22 17:12+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+"#-#-#-#-#  genpass_tmpl.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-01-22 17:12+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+"#-#-#-#-#  genpass_src.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-01-22 17:12+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+"#-#-#-#-#  genpass_tmpl.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-01-22 17:12+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: templates/index.tmpl:62 templates/index.tmpl:85 templates/index.tmpl:86
+msgid "(can used for part of password.)"
+msgstr ""
+
+#: templates/index.tmpl:43 templates/index.tmpl:44 templates/index.tmpl:67
+#: templates/index.tmpl:68
+msgid "(encrypt algorithm. default: sha256)"
+msgstr ""
+
+#: templates/index.tmpl:50 templates/index.tmpl:51 templates/index.tmpl:74
+#: templates/index.tmpl:75
+msgid "(generate rules, support multiple.default: alnum)"
+msgstr ""
+
+#: templates/index.tmpl:30 templates/index.tmpl:31 templates/index.tmpl:54
+#: templates/index.tmpl:55
+msgid "(original password, or use username about website.)"
+msgstr ""
+
+#: templates/index.tmpl:33 templates/index.tmpl:34 templates/index.tmpl:57
+#: templates/index.tmpl:58
+msgid "(password description, or use the website domain.)"
+msgstr ""
+
+#: templates/index.tmpl:36
+msgid "(password length. default:10)"
+msgstr ""
+
+#: templates/index.tmpl:37 templates/index.tmpl:60 templates/index.tmpl:61
+msgid "(password length. default:8)"
+msgstr ""
+
+#: templates/index.tmpl:64 templates/index.tmpl:87 templates/index.tmpl:88
+msgid "(used for password version. default:0)"
+msgstr ""
+
+#: templates/index.tmpl:41
+msgid "Advanced"
+msgstr ""
+
+#: templates/index.tmpl:42 templates/index.tmpl:43 templates/index.tmpl:66
+#: templates/index.tmpl:67
+msgid "Advanced Options"
+msgstr ""
+
+#: templates/index.tmpl:28 templates/index.tmpl:29 templates/index.tmpl:52
+#: templates/index.tmpl:53
+msgid "Basic"
+msgstr ""
+
+#: templates/index.tmpl:33 templates/index.tmpl:34 templates/index.tmpl:57
+#: templates/index.tmpl:58
+msgid "Description"
+msgstr ""
+
+#: main.go:40
+msgid "Description about the password, or use the website domain."
+msgstr ""
+
+#: templates/index.tmpl:62 templates/index.tmpl:85 templates/index.tmpl:86
+msgid "Extra Chars"
+msgstr ""
+
+#: templates/index.tmpl:50 templates/index.tmpl:51 templates/index.tmpl:74
+#: templates/index.tmpl:75
+msgid "Flag"
+msgstr ""
+
+#: templates/index.tmpl:90 templates/index.tmpl:91
+msgid "Generate"
+msgstr ""
+
+#: main.go:140 main.go:160
+msgid "Generate Password"
+msgstr ""
 
 #: main.go:149 main.go:148
 msgid "Generate Password Service"
@@ -725,8 +849,27 @@ msgstr ""
 msgid "Generate your password."
 msgstr ""
 
+#: templates/index.tmpl:47 templates/index.tmpl:48
+msgid "Generated Password"
+msgstr ""
+
+#: templates/index.tmpl:24 templates/index.tmpl:25 templates/index.tmpl:44
+#: templates/index.tmpl:10 templates/index.tmpl:45
+msgid "Genpass"
+msgstr ""
+
 #: main.go:26
 msgid "Http server port."
+msgstr ""
+
+#: templates/index.tmpl:36 templates/index.tmpl:37 templates/index.tmpl:60
+#: templates/index.tmpl:61
+msgid "Length"
+msgstr ""
+
+#: templates/index.tmpl:43 templates/index.tmpl:44 templates/index.tmpl:67
+#: templates/index.tmpl:68
+msgid "Method"
 msgstr ""
 
 #: main.go:66 main.go:65
@@ -737,6 +880,28 @@ msgstr ""
 msgid "Password version, for update password."
 msgstr ""
 
+#: main.go:137 main.go:136 main.go:128 main.go:148
+#, c-format
+msgid "Password: %s\n"
+msgstr ""
+
+#: templates/index.tmpl:30 templates/index.tmpl:31 templates/index.tmpl:54
+#: templates/index.tmpl:55
+msgid "Primary"
+msgstr ""
+
+#: main.go:34
+msgid "Primary password, or use user name about website."
+msgstr ""
+
+#: templates/index.tmpl:64 templates/index.tmpl:87 templates/index.tmpl:88
+msgid "Reversion"
+msgstr ""
+
+#: main.go:71
+msgid "Run http server to use web generate password."
+msgstr ""
+
 #: main.go:80 main.go:79 main.go:71
 msgid "Run http server to user web generate password."
 msgstr ""
@@ -745,21 +910,16 @@ msgstr ""
 msgid "The domain about your password used for."
 msgstr ""
 
+#: templates/index.tmpl:30
+msgid "User Name"
+msgstr ""
+
 #: main.go:34
 msgid "User name about website."
 msgstr ""
 
-#: main.go:51 main.go:50
-msgid "Which extra chars can used for part of password."
-msgstr ""
-
-#: main.go:56 main.go:55
-msgid "Which method should use, valid options is: md5|sha1|sha256|sha512"
-msgstr ""
-
-#: main.go:137 main.go:136 main.go:128 main.go:148
-#, c-format
-msgid "Password: %s\n"
+#: templates/index.tmpl:33
+msgid "Web Domain"
 msgstr ""
 
 #: main.go:45
@@ -768,72 +928,12 @@ msgid ""
 "\tupper|lower|alpha|digit|punct|xdigit|alpha|alnum|graph"
 msgstr ""
 
-#: main.go:140 main.go:160
-msgid "Generate Password"
+#: main.go:51 main.go:50
+msgid "Which extra chars can used for part of password."
 msgstr ""
 
-#: templates/index.tmpl:41
-msgid "Advanced"
-msgstr ""
-
-#: templates/index.tmpl:28 templates/index.tmpl:29 templates/index.tmpl:52
-msgid "Basic"
-msgstr ""
-
-#: templates/index.tmpl:24 templates/index.tmpl:25 templates/index.tmpl:44
-msgid "Genpass"
-msgstr ""
-
-#: templates/index.tmpl:30
-msgid "User Name"
-msgstr ""
-
-#: templates/index.tmpl:33
-msgid "Web Domain"
-msgstr ""
-
-#: main.go:71
-msgid "Run http server to use web generate password."
-msgstr ""
-
-#: main.go:40
-msgid "Description about the password, or use the website domain."
-msgstr ""
-
-#: main.go:34
-msgid "Primary password, or use user name about website."
-msgstr ""
-
-#: templates/index.tmpl:42 templates/index.tmpl:43 templates/index.tmpl:66
-msgid "Advanced Options"
-msgstr ""
-
-#: templates/index.tmpl:33 templates/index.tmpl:34 templates/index.tmpl:57
-msgid "Description"
-msgstr ""
-
-#: templates/index.tmpl:62 templates/index.tmpl:85
-msgid "Extra Chars"
-msgstr ""
-
-#: templates/index.tmpl:50 templates/index.tmpl:51 templates/index.tmpl:74
-msgid "Flag"
-msgstr ""
-
-#: templates/index.tmpl:36 templates/index.tmpl:37 templates/index.tmpl:60
-msgid "Length"
-msgstr ""
-
-#: templates/index.tmpl:43 templates/index.tmpl:44 templates/index.tmpl:67
-msgid "Method"
-msgstr ""
-
-#: templates/index.tmpl:30 templates/index.tmpl:31 templates/index.tmpl:54
-msgid "Primary"
-msgstr ""
-
-#: templates/index.tmpl:64 templates/index.tmpl:87
-msgid "Reversion"
+#: main.go:56 main.go:55
+msgid "Which method should use, valid options is: md5|sha1|sha256|sha512"
 msgstr ""
 
 #: templates/index.tmpl:62
@@ -862,44 +962,4 @@ msgstr ""
 
 #: templates/index.tmpl:64
 msgid "used for password version. (default:0)"
-msgstr ""
-
-#: templates/index.tmpl:62 templates/index.tmpl:85
-msgid "(can used for part of password.)"
-msgstr ""
-
-#: templates/index.tmpl:43 templates/index.tmpl:44 templates/index.tmpl:67
-msgid "(encrypt algorithm. default: sha256)"
-msgstr ""
-
-#: templates/index.tmpl:50 templates/index.tmpl:51 templates/index.tmpl:74
-msgid "(generate rules, support multiple.default: alnum)"
-msgstr ""
-
-#: templates/index.tmpl:30 templates/index.tmpl:31 templates/index.tmpl:54
-msgid "(original password, or use username about website.)"
-msgstr ""
-
-#: templates/index.tmpl:33 templates/index.tmpl:34 templates/index.tmpl:57
-msgid "(password description, or use the website domain.)"
-msgstr ""
-
-#: templates/index.tmpl:36
-msgid "(password length. default:10)"
-msgstr ""
-
-#: templates/index.tmpl:64 templates/index.tmpl:87
-msgid "(used for password version. default:0)"
-msgstr ""
-
-#: templates/index.tmpl:37 templates/index.tmpl:60
-msgid "(password length. default:8)"
-msgstr ""
-
-#: templates/index.tmpl:47
-msgid "Generated Password"
-msgstr ""
-
-#: templates/index.tmpl:90
-msgid "Generate"
 msgstr ""

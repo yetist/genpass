@@ -17,6 +17,82 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#: templates/index.tmpl:62 templates/index.tmpl:85 templates/index.tmpl:86
+msgid "(can used for part of password.)"
+msgstr "（允许这些字符成为最终密码的组成部分）"
+
+#: templates/index.tmpl:43 templates/index.tmpl:44 templates/index.tmpl:67
+#: templates/index.tmpl:68
+msgid "(encrypt algorithm. default: sha256)"
+msgstr "（加密算法。默认值：sha256）"
+
+#: templates/index.tmpl:50 templates/index.tmpl:51 templates/index.tmpl:74
+#: templates/index.tmpl:75
+msgid "(generate rules, support multiple.default: alnum)"
+msgstr "（生成规则，支持多选。默认值：alnum）"
+
+#: templates/index.tmpl:30 templates/index.tmpl:31 templates/index.tmpl:54
+#: templates/index.tmpl:55
+msgid "(original password, or use username about website.)"
+msgstr "（原始密码，或者使用和网站相关的用户名）"
+
+#: templates/index.tmpl:33 templates/index.tmpl:34 templates/index.tmpl:57
+#: templates/index.tmpl:58
+msgid "(password description, or use the website domain.)"
+msgstr "（密码描述，或者使用网站域名）"
+
+#: templates/index.tmpl:36
+msgid "(password length. default:10)"
+msgstr "（密码长度。默认值：10）"
+
+#: templates/index.tmpl:37 templates/index.tmpl:60 templates/index.tmpl:61
+msgid "(password length. default:8)"
+msgstr "（密码长度。默认值：8）"
+
+#: templates/index.tmpl:64 templates/index.tmpl:87 templates/index.tmpl:88
+msgid "(used for password version. default:0)"
+msgstr "（密码版本号。默认值：0）"
+
+#: templates/index.tmpl:41
+msgid "Advanced"
+msgstr "高级"
+
+#: templates/index.tmpl:42 templates/index.tmpl:43 templates/index.tmpl:66
+#: templates/index.tmpl:67
+msgid "Advanced Options"
+msgstr "高级选项"
+
+#: templates/index.tmpl:28 templates/index.tmpl:29 templates/index.tmpl:52
+#: templates/index.tmpl:53
+msgid "Basic"
+msgstr "基本"
+
+#: templates/index.tmpl:33 templates/index.tmpl:34 templates/index.tmpl:57
+#: templates/index.tmpl:58
+msgid "Description"
+msgstr "描述"
+
+#: main.go:40
+msgid "Description about the password, or use the website domain."
+msgstr "密码描述，或者直接使用网站域名"
+
+#: templates/index.tmpl:62 templates/index.tmpl:85 templates/index.tmpl:86
+msgid "Extra Chars"
+msgstr "扩展字符"
+
+#: templates/index.tmpl:50 templates/index.tmpl:51 templates/index.tmpl:74
+#: templates/index.tmpl:75
+msgid "Flag"
+msgstr "标志"
+
+#: templates/index.tmpl:90 templates/index.tmpl:91
+msgid "Generate"
+msgstr "生成密码"
+
+#: main.go:140 main.go:160
+msgid "Generate Password"
+msgstr "生成密码"
+
 #: main.go:149 main.go:148
 msgid "Generate Password Service"
 msgstr "密码生成服务"
@@ -29,9 +105,28 @@ msgstr "立刻生成密码"
 msgid "Generate your password."
 msgstr "生成你的密码"
 
+#: templates/index.tmpl:47 templates/index.tmpl:48
+msgid "Generated Password"
+msgstr "生成的密码"
+
+#: templates/index.tmpl:24 templates/index.tmpl:25 templates/index.tmpl:44
+#: templates/index.tmpl:10 templates/index.tmpl:45
+msgid "Genpass"
+msgstr "密码生成器"
+
 #: main.go:26
 msgid "Http server port."
 msgstr "Http服务端口"
+
+#: templates/index.tmpl:36 templates/index.tmpl:37 templates/index.tmpl:60
+#: templates/index.tmpl:61
+msgid "Length"
+msgstr "长度"
+
+#: templates/index.tmpl:43 templates/index.tmpl:44 templates/index.tmpl:67
+#: templates/index.tmpl:68
+msgid "Method"
+msgstr "方式"
 
 #: main.go:66 main.go:65
 msgid "Password length, default is 8."
@@ -41,6 +136,28 @@ msgstr "密码长度，默认为8位长度。"
 msgid "Password version, for update password."
 msgstr "密码版本，通常用于更新密码。"
 
+#: main.go:137 main.go:136 main.go:128 main.go:148
+#, c-format
+msgid "Password: %s\n"
+msgstr "密码：%s\n"
+
+#: templates/index.tmpl:30 templates/index.tmpl:31 templates/index.tmpl:54
+#: templates/index.tmpl:55
+msgid "Primary"
+msgstr "主密码"
+
+#: main.go:34
+msgid "Primary password, or use user name about website."
+msgstr "主密码，或者直接使用网站用户名"
+
+#: templates/index.tmpl:64 templates/index.tmpl:87 templates/index.tmpl:88
+msgid "Reversion"
+msgstr "版本号"
+
+#: main.go:71
+msgid "Run http server to use web generate password."
+msgstr "运行Http服务来提供密码生成的在线服务"
+
 #: main.go:80 main.go:79 main.go:71
 msgid "Run http server to user web generate password."
 msgstr "运行Http服务来提供密码生成的在线服务"
@@ -49,22 +166,17 @@ msgstr "运行Http服务来提供密码生成的在线服务"
 msgid "The domain about your password used for."
 msgstr "使用密码的网站域名"
 
+#: templates/index.tmpl:30
+msgid "User Name"
+msgstr "用户名"
+
 #: main.go:34
 msgid "User name about website."
 msgstr "和网站相关的用户名"
 
-#: main.go:51 main.go:50
-msgid "Which extra chars can used for part of password."
-msgstr "允许这些字符作为最终密码的一部分组成"
-
-#: main.go:56 main.go:55
-msgid "Which method should use, valid options is: md5|sha1|sha256|sha512"
-msgstr "加密方式，可选值为：md5|sha1|sha256|sha512"
-
-#: main.go:137 main.go:136 main.go:128 main.go:148
-#, c-format
-msgid "Password: %s\n"
-msgstr "密码：%s\n"
+#: templates/index.tmpl:33
+msgid "Web Domain"
+msgstr "域名"
 
 #: main.go:45
 msgid ""
@@ -74,73 +186,13 @@ msgstr ""
 "哪些字符可以包含在密码中，有效的选项为：\n"
 "\tupper|lower|alpha|digit|punct|xdigit|alpha|alnum|graph"
 
-#: main.go:140 main.go:160
-msgid "Generate Password"
-msgstr "生成密码"
+#: main.go:51 main.go:50
+msgid "Which extra chars can used for part of password."
+msgstr "允许这些字符作为最终密码的一部分组成"
 
-#: templates/index.tmpl:41
-msgid "Advanced"
-msgstr "高级"
-
-#: templates/index.tmpl:28 templates/index.tmpl:29 templates/index.tmpl:52
-msgid "Basic"
-msgstr "基本"
-
-#: templates/index.tmpl:24 templates/index.tmpl:25 templates/index.tmpl:44
-msgid "Genpass"
-msgstr "密码生成器"
-
-#: templates/index.tmpl:30
-msgid "User Name"
-msgstr "用户名"
-
-#: templates/index.tmpl:33
-msgid "Web Domain"
-msgstr "域名"
-
-#: main.go:71
-msgid "Run http server to use web generate password."
-msgstr "运行Http服务来提供密码生成的在线服务"
-
-#: main.go:40
-msgid "Description about the password, or use the website domain."
-msgstr "密码描述，或者直接使用网站域名"
-
-#: main.go:34
-msgid "Primary password, or use user name about website."
-msgstr "主密码，或者直接使用网站用户名"
-
-#: templates/index.tmpl:42 templates/index.tmpl:43 templates/index.tmpl:66
-msgid "Advanced Options"
-msgstr "高级选项"
-
-#: templates/index.tmpl:33 templates/index.tmpl:34 templates/index.tmpl:57
-msgid "Description"
-msgstr "描述"
-
-#: templates/index.tmpl:62 templates/index.tmpl:85
-msgid "Extra Chars"
-msgstr "扩展字符"
-
-#: templates/index.tmpl:50 templates/index.tmpl:51 templates/index.tmpl:74
-msgid "Flag"
-msgstr "标志"
-
-#: templates/index.tmpl:36 templates/index.tmpl:37 templates/index.tmpl:60
-msgid "Length"
-msgstr "长度"
-
-#: templates/index.tmpl:43 templates/index.tmpl:44 templates/index.tmpl:67
-msgid "Method"
-msgstr "方式"
-
-#: templates/index.tmpl:30 templates/index.tmpl:31 templates/index.tmpl:54
-msgid "Primary"
-msgstr "主密码"
-
-#: templates/index.tmpl:64 templates/index.tmpl:87
-msgid "Reversion"
-msgstr "版本号"
+#: main.go:56 main.go:55
+msgid "Which method should use, valid options is: md5|sha1|sha256|sha512"
+msgstr "加密方式，可选值为：md5|sha1|sha256|sha512"
 
 #: templates/index.tmpl:62
 msgid "can used for part of password."
@@ -169,43 +221,3 @@ msgstr "密码长度。（默认值：10）"
 #: templates/index.tmpl:64
 msgid "used for password version. (default:0)"
 msgstr "密码版本号。（默认值：0）"
-
-#: templates/index.tmpl:62 templates/index.tmpl:85
-msgid "(can used for part of password.)"
-msgstr "（允许这些字符成为最终密码的组成部分）"
-
-#: templates/index.tmpl:43 templates/index.tmpl:44 templates/index.tmpl:67
-msgid "(encrypt algorithm. default: sha256)"
-msgstr "（加密算法。默认值：sha256）"
-
-#: templates/index.tmpl:50 templates/index.tmpl:51 templates/index.tmpl:74
-msgid "(generate rules, support multiple.default: alnum)"
-msgstr "（生成规则，支持多选。默认值：alnum）"
-
-#: templates/index.tmpl:30 templates/index.tmpl:31 templates/index.tmpl:54
-msgid "(original password, or use username about website.)"
-msgstr "（原始密码，或者使用和网站相关的用户名）"
-
-#: templates/index.tmpl:33 templates/index.tmpl:34 templates/index.tmpl:57
-msgid "(password description, or use the website domain.)"
-msgstr "（密码描述，或者使用网站域名）"
-
-#: templates/index.tmpl:36
-msgid "(password length. default:10)"
-msgstr "（密码长度。默认值：10）"
-
-#: templates/index.tmpl:64 templates/index.tmpl:87
-msgid "(used for password version. default:0)"
-msgstr "（密码版本号。默认值：0）"
-
-#: templates/index.tmpl:37 templates/index.tmpl:60
-msgid "(password length. default:8)"
-msgstr "（密码长度。默认值：8）"
-
-#: templates/index.tmpl:47
-msgid "Generated Password"
-msgstr "生成的密码"
-
-#: templates/index.tmpl:90
-msgid "Generate"
-msgstr "生成密码"
