@@ -72,7 +72,7 @@ $(document).ready(function(){
 						<option>sha512</option>
 					</select>
 					<label for="flag">{{__ ("Flag")}} {{__ ("(generate rules, support multiple.default: alnum)")}}</label>
-					<select name="flag" id="flag" multiple class="form-control">
+					<select name="flag" id="flag" size="8" multiple class="form-control">
 						<option>lower</option>
 						<option>upper</option>
 						<option>alpha</option>
@@ -87,7 +87,7 @@ $(document).ready(function(){
 					<label for="reversion">{{__ ("Reversion")}} {{__ ("(used for password version. default:0)")}}</label>
 					<input type="number" name="reversion" id="reversion" class="form-control" min="0" max="100" value="0" placeholder="Reversion">
 				</fieldset>
-				<button class="btn btn-lg btn-primary btn-block" type="submit">Generate</button>
+				<button class="btn btn-lg btn-primary btn-block" type="submit">{{__ ("Generate")}}</button>
 			</form>
 		</div> <!-- /container -->
 	</body>
