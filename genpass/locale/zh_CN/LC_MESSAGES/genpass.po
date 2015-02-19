@@ -17,6 +17,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#: templates/index.tmpl:58
+msgid "(Description about the password.)"
+msgstr "（密码描述）"
+
+#: templates/index.tmpl:55
+msgid "(Primary password.)"
+msgstr "（主密码）"
+
 #: templates/index.tmpl:62 templates/index.tmpl:85 templates/index.tmpl:86
 msgid "(can used for part of password.)"
 msgstr "（允许这些字符成为最终密码的组成部分）"
@@ -75,6 +83,10 @@ msgstr "描述"
 #: main.go:40
 msgid "Description about the password, or use the website domain."
 msgstr "密码描述，或者直接使用网站域名"
+
+#: main.go:40
+msgid "Description about the password."
+msgstr "密码描述"
 
 #: templates/index.tmpl:62 templates/index.tmpl:85 templates/index.tmpl:86
 msgid "Extra Chars"
@@ -150,6 +162,10 @@ msgstr "主密码"
 msgid "Primary password, or use user name about website."
 msgstr "主密码，或者直接使用网站用户名"
 
+#: main.go:34
+msgid "Primary password."
+msgstr "主密码"
+
 #: templates/index.tmpl:64 templates/index.tmpl:87 templates/index.tmpl:88
 msgid "Reversion"
 msgstr "版本号"
@@ -205,14 +221,6 @@ msgstr "加密算法。（默认值：sha256）"
 #: templates/index.tmpl:50
 msgid "generate rules, support multiple.(default: alnum)"
 msgstr "生成规则，支持多选。（默认值：alnum）"
-
-#: templates/index.tmpl:30
-msgid "original password, or use username about website."
-msgstr "原始密码，或者使用和网站相关的用户名"
-
-#: templates/index.tmpl:33
-msgid "password description, or use the website domain."
-msgstr "密码描述，或者使用网站域名"
 
 #: templates/index.tmpl:36
 msgid "password length. (default:10)"

@@ -31,13 +31,13 @@ var cmdFlags = []cli.Flag{
 	cli.StringFlag{
 		Name:  "primary, p",
 		Value: "primary",
-		Usage: __("Primary password, or use user name about website."),
+		Usage: __("Primary password."),
 	},
 
 	cli.StringFlag{
 		Name:  "description, d",
 		Value: "description.com",
-		Usage: __("Description about the password, or use the website domain."),
+		Usage: __("Description about the password."),
 	},
 	cli.StringFlag{
 		Name:  "flag, f",
