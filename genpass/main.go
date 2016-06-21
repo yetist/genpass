@@ -133,7 +133,7 @@ func genFlag(flag string) int {
 	return flagtable[flag]
 }
 
-func runGen(c *cli.Context) {
+func runGen(c *cli.Context) error {
 	opt := genpass.Options{
 		Primary:     c.String("primary"),
 		Description: c.String("description"),
@@ -145,6 +145,7 @@ func runGen(c *cli.Context) {
 	}
 	p := genpass.Gen(opt)
 	fmt.Printf("Password: %s\n", p)
+	return nil
 }
 
 func __(msgid string) string {
